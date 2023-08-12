@@ -1,15 +1,4 @@
-import { useState } from "react";
-
 const Hero = () => {
-  const [isMinted, setIsMinted] = useState(false);
-
-  //mint function after 1 minute
-  const mint = () => {
-    setTimeout(() => {
-      setIsMinted(true);
-    }, 1000);
-  };
-
   return (
     <section>
       <div className="max-w-[90%] mx-auto z-10">
