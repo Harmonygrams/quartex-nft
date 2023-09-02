@@ -1,5 +1,5 @@
 //import hooks
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 //import components
 import { Header, NetworkPicker } from "../../components";
