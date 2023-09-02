@@ -12,9 +12,12 @@ const Hero = () => {
               Improving customer satisfaction and business efficency <br />
               and helping companies achieve quantum scalability
             </p>
-            <button className="text-black bg-green-500 px-16 py-2 rounded-sm mt-6 hover:bg-green-600 transition hover:scale-10 md:px-24 md:py-3 text-xl">
-              mint
-            </button>
+            <a
+              href="/launchpad"
+              className="inline-block text-black bg-green-500 px-16 py-2 rounded-sm mt-6 hover:bg-green-600 transition hover:scale-10 md:px-24 md:py-3 text-xl rounded-lg"
+            >
+              Launchpad
+            </a>
           </div>
         </section>
       </div>

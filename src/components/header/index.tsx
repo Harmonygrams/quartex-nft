@@ -1,10 +1,11 @@
-//import hooks
-import { useState } from "react";
+//importing locations
+import { useLocation } from "react-router-dom";
 //import icons
 import { AiOutlineTwitter } from "react-icons/ai";
 
 const Header = () => {
-  const [isConnected, setIsConnected] = useState(false);
+  const location = useLocation();
+  const pathname: string = location.pathname;
   return (
     <header className="header py-4 md:py-6">
       <div className="max-w-[90%] mx-auto">
@@ -23,12 +24,14 @@ const Header = () => {
             >
               <AiOutlineTwitter />
             </a>
-            <button
-              className="text-green-500 font-orbitron transition cursor-pointer hover:text-white md:text-xl"
-              onClick={() => setIsConnected((prev) => !prev)}
-            >
-              {isConnected ? "0x921f8...FD6" : "Connect Wallet"}
-            </button>
+            {pathname !== "/launchpad" && (
+              <a
+                href="/launchpad"
+                className="text-green-500 font-orbitron transition cursor-pointer hover:text-white md:text-xl"
+              >
+                Launchpad
+              </a>
+            )}
           </div>
         </div>
       </div>

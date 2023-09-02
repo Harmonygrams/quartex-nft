@@ -1,14 +1,15 @@
 import "./App.css";
-
-// importing components
-import { Animation, Header, Hero } from "./components";
-
+import { Routes, Route } from "react-router-dom";
+// importing component
+import { Home, Launchpad } from "./pages";
 function App() {
   return (
     <>
-      <Header />
-      <Hero />
-      <Animation />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/launchpad" element={<Launchpad />} />
+        <Route path="*" element={<Home />} />
+      </Routes>
     </>
   );
 }
